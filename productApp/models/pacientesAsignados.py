@@ -7,5 +7,5 @@ from .paciente import Paciente
 
 class pacientesAsignados(models.Model):
     cant_pacientes = models.AutoField(primary_key=True)
-    medico = models.ForeignKey(Medico, related_name='medico_paciente_asignado', on_delete=models.CASCADE)
-    paciente = models.ForeignKey(Paciente, related_name='paciente_medico_asignado', on_delete=models.CASCADE)
+    medico = models.ForeignKey(Medico, related_name='medico', on_delete=models.CASCADE)
+    paciente = models.ForeignKey(Paciente, related_name='medico', on_delete=models.CASCADE)

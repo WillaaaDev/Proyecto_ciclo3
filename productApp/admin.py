@@ -8,6 +8,10 @@ from .models.familiar import Familiar
 from .models.enfermero import Enfermero
 from .models.pacientesAsignados import pacientesAsignados
 from .models.historiasClinicas import historiasClinicas
+from django.contrib import admin
+from .models.user import User
+from .models.account import Account
+
 
 # Register your models here.
 admin.site.register(Usuario)
@@ -19,3 +23,5 @@ admin.site.register(Familiar)
 admin.site.register(Enfermero)
 admin.site.register(pacientesAsignados)
 admin.site.register(historiasClinicas)
+admin.site.register(User)
+admin.site.register(Account)

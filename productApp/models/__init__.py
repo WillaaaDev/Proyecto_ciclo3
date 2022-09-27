@@ -7,3 +7,4 @@ from .familiar import Familiar
 from .enfermero import Enfermero
 from .pacientesAsignados import pacientesAsignados
 from .historiasClinicas import historiasClinicas
+from .user import User
