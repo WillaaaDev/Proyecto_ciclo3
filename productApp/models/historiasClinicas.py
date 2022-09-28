@@ -7,5 +7,5 @@ from .historico import HistoriaClinica
 
 class historiasClinicas(models.Model):
     cant_historiasClinicas = models.AutoField(primary_key=True)
-    medico = models.ForeignKey(Medico, related_name='medico', on_delete=models.CASCADE)
-    id_historia = models.ForeignKey(HistoriaClinica, related_name='hisoriasClinicas', on_delete=models.CASCADE)
+    medico = models.ForeignKey(Medico, related_name='historiasClinicas', on_delete=models.CASCADE)
+    id_historia = models.ForeignKey(HistoriaClinica, related_name='historiasClinicas', on_delete=models.CASCADE)
