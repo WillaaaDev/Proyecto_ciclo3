@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-3(i&fbd@$r2v2*@+(yy-w6d6!=ky)2c(^bur()i#-b1)elaef4'
+SECRET_KEY = 'django-insecure-m6u7(9i_$gc)#t%6k)nj1i(3(logy6m83^=nlnb8lirusl-r-e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'authApp',
-    'productApp',
+    'hospitalApp',
 ]
 
 SIMPLE_JWT = {
@@ -73,9 +73,8 @@ REST_FRAMEWORK = {
     )
 }
 
-AUTH_USER_MODEL = 'authApp.User'
-
 ROOT_URLCONF = 'authProject.urls'
+AUTH_USER_MODEL = 'authApp.User'
 
 TEMPLATES = [
     {
@@ -109,6 +108,7 @@ DATABASES = {
             'PORT': '5432',
         }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators

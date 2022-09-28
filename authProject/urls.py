@@ -15,11 +15,14 @@ Including another URLconf
 """
 from django.urls import path
 from rest_framework_simplejwt.views import (TokenObtainPairView, TokenRefreshView)
-from authApp import views
+from authApp import views as views_authApp
+from hospitalApp import views as views_hospital
 
 urlpatterns = [
-    path('login/', TokenObtainPairView.as_view()),
-    path('refresh/', TokenRefreshView.as_view()),
-    path('user/', views.UserCreateView.as_view()),
-    path('user/<int:pk>/', views.UserDetailView.as_view()),
+path('login/', TokenObtainPairView.as_view()),
+path('refresh/', TokenRefreshView.as_view()),
+path('user/', views_authApp.UserCreateView.as_view()),
+path('user/<int:pk>/', views_authApp.UserDetailView.as_view()),
+path('usuario/', views_hospital.usuarios_api_view),
+path('usuario/<int:pk>/', views_hospital.usuarios_detail_view),
 ]
