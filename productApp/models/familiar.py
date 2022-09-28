@@ -14,5 +14,5 @@ class Familiar(models.Model):
     Celular = models.CharField('Especialidad', max_length = 100)
     Direccion = models.CharField('Especialidad', max_length = 100)
     paciente_id = models.ForeignKey(Paciente, related_name='familiar', on_delete=models.CASCADE) 
-    historia_id = models.ForeignKey(HistoriaClinica, related_name='historiasClinicas', on_delete=models.CASCADE) 
+    historia_id = models.ForeignKey(HistoriaClinica, related_name='familiar', on_delete=models.CASCADE) 
     usuario_id = models.ForeignKey(Usuario, related_name='familiar', on_delete=models.CASCADE)
