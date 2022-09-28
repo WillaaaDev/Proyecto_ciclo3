@@ -9,4 +9,4 @@ class Medico(models.Model):
     Nombre = models.CharField('Nombre', max_length = 100)
     Especialidad = models.CharField('Especialidad', max_length = 100)
     Telefono = models.CharField('Telefono', max_length = 100)
-    usuario_id = models.ForeignKey(Usuario, related_name='usuarios', on_delete=models.CASCADE)
+    usuario_id = models.ForeignKey(Usuario, related_name='medico', on_delete=models.CASCADE)
