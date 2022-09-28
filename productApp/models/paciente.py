@@ -12,5 +12,5 @@ class Paciente(models.Model):
     Cedula = models.CharField('Cedula', max_length = 100)
     Celular = models.CharField('Celular', max_length = 100)
     Direccion = models.CharField('Direccion', max_length = 100)
-    historia_id = models.ForeignKey(HistoriaClinica, related_name='historiasClinicas', on_delete=models.CASCADE) 
-    usuario_id = models.ForeignKey(Usuario, related_name='usuarios', on_delete=models.CASCADE)
+    historia_id = models.ForeignKey(HistoriaClinica, related_name='paciente', on_delete=models.CASCADE) 
+    usuario_id = models.ForeignKey(Usuario, related_name='paciente', on_delete=models.CASCADE)
